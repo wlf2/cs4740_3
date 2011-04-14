@@ -226,7 +226,7 @@ saturated model contained the following predictors and all interactions
 \end{itemize}
 
 The predictor combination yielding the lowest value of the Akaike information criterion
-included the following parameters.
+included the following parameters:
 
 \begin{itemize}
 \item Intercept
@@ -263,17 +263,17 @@ collocation:cooccurrence1:dependency parsing & 0.0147078  \\
 \end{tabular}
 
 As the regression table above shows, it seems that substituting the
-Decision Tree classifier for the Naive Bayes baseline provides the
-most significant boost to our f measure. It can also be seen here that
-increasing the collocation window will increase the f measure by about 0.003
+Decision Tree classifier for the \naive{} Bayes baseline provides the
+most significant boost to our f-measure. It can also be seen here that
+increasing the collocation window will increase the f-measure by about 0.003
 for each additional word added to the window. Additionally, enabling
-the cooccurrence feature extractor with the Naive Bayes classifier
-will increase the f measure by a significant amount as well.
+the co-occurrence feature extractor with the Naive Bayes classifier
+will increase the f-measure by a significant amount as well.
 
 The rows that contain negative terms may indicate that the interacting
 features provide similar functionality. That is, the enabled features
-are interfering with each other so that their final influence on the f
-measure may affect the f measure negatively. For instance, the row
+are interfering with each other so that their final influence on the
+f-measure may affect the f-measure negatively. For instance, the row
 showing ``classifiert:collocation'' indicates a run where the Decision
 Tree classifier was used and the collocation feature was enabled has
 resulted in a lower accuracy. This seems to be the general trend for
@@ -281,7 +281,7 @@ all of the interacting features. It may be interesting to note that
 the interaction between collocation and cooccurrence1 as well as
 collocation and dependency parsing produce the most innocuous
 cumulative effect. Perhaps this may be why collocation and
-cooccurrence are often advocated to be used together.
+co-occurrence are often advocated to be used together.
 
 \subsection{Graphical methods}
 We began by plotting the predictors that seemed most influential in the
