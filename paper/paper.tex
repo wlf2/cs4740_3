@@ -6,12 +6,12 @@
 \title{Word Sense Disambiguation\\
 \small{Leveraging the NLTK Toolkit and External Tools}}
 \author{
-Alec Story
-Ansu Abraham
-Craig Frey\\
-Dustin Tiedemann
-Michael Zhu
-Thomas Levine
+Alec Story,
+Ansu Abraham,
+Craig Frey,\\
+Dustin Tiedemann,
+Michael Zhu,
+Thomas Levine,
 Whitney Foster\\
 }
 
@@ -316,7 +316,7 @@ The \naive{} Bayes classifier had better top-range performance.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{pg_0003}
-\caption{\label{fig3}}
+\caption{\label{fig3}Performance for systems with collocation window of size between 2 and 4}
 \end{figure}
 
 According to Figure \ref{fig3}, when the base word feature vector was
@@ -355,7 +355,7 @@ coarse  &  0.612 & 0.612 &  100.00\\
 Our run with the highest overall F-measure (overall precision 0.718, overall
 recall 0.610), used co-occurrence, collocation out to a distance of 2, base word,
 no dependency parsing, and bootstrapped once:
-
+\newpage
 \begin{longtable}{l | r r r r r r r}
 		&	&	\multicolumn{2}{c}{Fine Grain}	&	\multicolumn{2}{c}{Course Grain}	&	\multicolumn{2}{c}{Mixed}\\
 Word	&	Corpus Size	&	Precision	&	Recall	&	Precision	&	Recall	&	Precision	&	Recall\\
@@ -475,12 +475,14 @@ instances of the words that we needed to disambiguate and return a context
 (list of words) and the position of the word in that list.  We also made sure
 that the context that we returned both started at the beginning of the
 sentence and ended at the end of a sentence and had a minimum of 25 words
-returned on either side of the word.  This data would then be converted into
+returned on either side of the word.
+
+This data would then be converted into
 the form of the data that we received from the Senseval document and ran
 through the bootstrapping algorithm to have more data to train with.  However
 when we actually tested this feature alone we found it to be very
-uninformative.  First, there were very few instances of the words that we were
-looking for (ex: activate only appeared 3 times), which made searching through
+uninformative.  There were very few instances of the words that we were
+looking for (e.g. activate only appeared 3 times), which made searching through
 the entire corpus to find these words more time consuming than it was helpful.
 Therefore, we decided not to use it for the actual test because it was not
 informative enough by itself.
